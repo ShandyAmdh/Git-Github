@@ -21,6 +21,8 @@ Perintah command :
 4. cd .. => mundur 1 folder
 5. git status => melihat status file di area mana 
 6. git commit -m "pesan kita" / bisa juga git commit -am "pesan kita" (tapi cara kedua ini jika folder hanya modified)
+7. git branch => melihat ada berapa branch direpo
+8. git branch <nama branch> => membuat branch
 
 
 
