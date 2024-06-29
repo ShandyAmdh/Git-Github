@@ -25,7 +25,17 @@ Perintah command :
 8. git branch <nama branch> => membuat branch
 9. git log --all --decorate --graph / buat saja alias supayah tidak perlu panjang mengetik code caranya:
    * alias graph = "git log --all --decorate --graph" jadi tinggal ketik graph 
-
+10. git checkout <namabranch> => pindah ke branch lain
+11. git merge <namabranch> => menggabungkan beberapa branch dengan catatan harus kembali dulu ke branch master
+12. git branch -d <namabranch> =>menghapus branch yang sudah di merge
+13. git branch --merged => untuk melihat branch mana yang sudah di gabung
+14. git branch -D <namabranch> => untuk menghapus branch meskipun belum dimerge
+15. git clone <link remote>
+16. git remote => mengecek remote
+17. git config --list => melihat semua configurasi git
+18. git remote -v => melihat data lebih detail tidak hanya namanya
+19. git push => menaruh file/repo dari lokal ke github
+20. git pull => mengambil file/repo dari github ke lokal
 
 
 
