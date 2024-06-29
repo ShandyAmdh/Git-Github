@@ -23,6 +23,8 @@ Perintah command :
 6. git commit -m "pesan kita" / bisa juga git commit -am "pesan kita" (tapi cara kedua ini jika folder hanya modified)
 7. git branch => melihat ada berapa branch direpo
 8. git branch <nama branch> => membuat branch
+9. git log --all --decorate --graph / buat saja alias supayah tidak perlu panjang mengetik code caranya:
+   * alias graph = "git log --all --decorate --graph" jadi tinggal ketik graph 
 
 
 
