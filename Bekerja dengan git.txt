@@ -1,0 +1,27 @@
+#Git command lokal
+1. git init
+2. git add <nama file> / bisa langsung sekaligus git add . => gunanya untuk memasukkan file ke state area sebelum di commit
+3. git status, untuk melihat status file di area mana
+4. git commit, commit setelah state area
+5. git config, untuk melakukan configurasi
+   * git config --global user.email "email kita"
+   * git config --global user.name "nama kita"
+6. git branch, membuat cabang baru
+7. git help, bantuan cs git
+
+Ada 3 area pada repo git:
+1. Working tree, folder tempat mulai bekerja
+2. Staging area
+3. History
+
+Perintah command :
+1. pwd => untuk melihat kita ada difolder mana
+2. ls => untuk melihat semua isi folder
+3. cd <namafoldertujuan>  => naik 1 folder
+4. cd .. => mundur 1 folder
+5. git status => melihat status file di area mana 
+6. git commit -m "pesan kita" / bisa juga git commit -am "pesan kita" (tapi cara kedua ini jika folder hanya modified)
+
+
+
+
