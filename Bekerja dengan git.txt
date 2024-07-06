@@ -14,28 +14,80 @@ Ada 3 area pada repo git:
 2. Staging area
 3. History
 
-Perintah command :
+Perintah Git :
+#PERINTAH DASAR
 1. pwd => untuk melihat kita ada difolder mana
 2. ls => untuk melihat semua isi folder
 3. cd <namafoldertujuan>  => naik 1 folder
 4. cd .. => mundur 1 folder
+----------------------------------------------------------------------------------------------------------------------------------------
+#GIT PERINTAH PROSES WD SA REPO
 5. git status => melihat status file di area mana 
 6. git commit -m "pesan kita" / bisa juga git commit -am "pesan kita" (tapi cara kedua ini jika folder hanya modified)
-7. git branch => melihat ada berapa branch direpo
-8. git branch <nama branch> => membuat branch
-9. git log --all --decorate --graph / buat saja alias supayah tidak perlu panjang mengetik code caranya:
+----------------------------------------------------------------------------------------------------------------------------------------
+#GIT BRANCH
+1. git branch => melihat ada berapa branch direpo
+2. git branch <nama branch> => membuat branch
+3. git checkout <namabranch> => pindah ke branch lain
+4. git merge <namabranch> => menggabungkan beberapa branch dengan catatan harus kembali dulu ke branch master
+5. git branch -d <namabranch> =>menghapus branch yang sudah di merge
+6. git branch --merged => untuk melihat branch mana yang sudah di gabung
+7. git branch -D <namabranch> => untuk menghapus branch meskipun belum dimerge
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MELIHAT RIWAYAT COMMIT
+1. git log --all --decorate --graph / buat saja alias supayah tidak perlu panjang mengetik code caranya:
    * alias graph = "git log --all --decorate --graph" jadi tinggal ketik graph 
-10. git checkout <namabranch> => pindah ke branch lain
-11. git merge <namabranch> => menggabungkan beberapa branch dengan catatan harus kembali dulu ke branch master
-12. git branch -d <namabranch> =>menghapus branch yang sudah di merge
-13. git branch --merged => untuk melihat branch mana yang sudah di gabung
-14. git branch -D <namabranch> => untuk menghapus branch meskipun belum dimerge
-15. git clone <link remote>
-16. git remote => mengecek remote
-17. git config --list => melihat semua configurasi git
-18. git remote -v => melihat data lebih detail tidak hanya namanya
-19. git push => menaruh file/repo dari lokal ke github
-20. git pull => mengambil file/repo dari github ke lokal
-
-
-
+2. git log
+3. git log --oneline
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MELIHAT PERUBAHAN FILE
+1. git diff
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MELIHAT DETAIL COMMIT
+1.git show kodehash
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MEMBATALKAN PERUBAHAN/PENGHAPUSAN FILE
+1. git restore namafile
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MEMBATALKAN PENAMBAHAN FILE
+1. git clean -f
+-----------------------------------------------------------------------------------------------------------------------------------------
+#MEMBATALKAN DARI STAGING AREA MENJADI WORKING DIRECTORY LAGI
+1. git restore --staged namafile
+-----------------------------------------------------------------------------------------------------------------------------------------
+#COMPARE COMMIT
+1. git diff hash1 hash2 => kode ditampilkan  dicomand prompt
+2. git difftool hash1 hash2 => kode ditampilkan dicode editor
+-----------------------------------------------------------------------------------------------------------------------------------------
+#GIT REMOTE
+1. git clone <link remote>
+2. git remote => mengecek remote
+3. git config --list => melihat semua configurasi git
+4. git remote -v => melihat data lebih detail tidak hanya namanya
+5. git push => menaruh file/repo dari lokal ke github
+6. git pull => mengambil file/repo dari github ke lokal
+-----------------------------------------------------------------------------------------------------------------------------------------
+#RESET COMMIT
+1. git reset <mode> kodehash
+Ada 3 mode:
+1. --soft 
+2. --mixed
+3. --hard
+-----------------------------------------------------------------------------------------------------------------------------------------
+#GIT AMEND COMMIT
+1. git commit --amend -m "Pesan"
+fungsi git amend agar ketika melakukan perubahan tidak membuat commit baru tapi dimerge dicommit terakhir
+-----------------------------------------------------------------------------------------------------------------------------------------
+#KEMBALI KE VERSI SEBELUMNYA
+1. git checkout hash -- namafile
+-----------------------------------------------------------------------------------------------------------------------------------------
+#GIT SNAPSHOT SEBELUMNYA
+Jika ingin menuju commit tertentu:
+1. git checkout hash
+Jika ingin pindah branch:
+2. git checkout namabranch
+-----------------------------------------------------------------------------------------------------------------------------------------
+#BLAME 
+Digunakan untuk mencari tahu, siapa yang menambahkan perubahan pada file dan jga mengetahui commitnya,dengan perintah:
+1. git blame namafile
+-----------------------------------------------------------------------------------------------------------------------------------------
