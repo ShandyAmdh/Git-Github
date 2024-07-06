@@ -91,3 +91,9 @@ Jika ingin pindah branch:
 Digunakan untuk mencari tahu, siapa yang menambahkan perubahan pada file dan jga mengetahui commitnya,dengan perintah:
 1. git blame namafile
 -----------------------------------------------------------------------------------------------------------------------------------------
+#ALIAS 
+Membuat alias untuk perintah git agar tidak perlu menulis terlalu panjang
+dengan perintah:
+1. git config --global alias.namaalias namaperintah
+contoh : git config --global alias.ko commit
+-----------------------------------------------------------------------------------------------------------------------------------------
