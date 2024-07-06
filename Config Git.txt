@@ -1,0 +1,14 @@
+#Configurasi 
+Setelah menginstall git, hal yang pertama dilakukan adalah configurasi.
+Dengan Perintah:
+1. git config --global user.name "namakita"
+2. git config --global user.email "emailkita"
+
+#Menggunakan Visual Studio Code
+Agar mempermudah, kita akan menjadikan VS Code sebagai default editor untuk git dan default difftool, dengan perintah:
+1. git config --global core.editor "code --wait"
+2. git config --global diff.tool "default-difftool"
+3. git config --global difftool.default-difftool.cmd "code --wait --diff \ $LOCAL \ $REMOTE"
+
+#Untuk Melihat Seluruh Configurasi :
+git config --list --show -origin
