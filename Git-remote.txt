@@ -1,0 +1,8 @@
+#GIT REMOTE
+SSH adalah secure shell,
+Merupakan protokol jaringan untuk komunikasi jaringan yang aman dan terenkripsi
+
+#SSH KEY
+Hal yang pertama perlu dilakukan ketika menggunakan SSH adalah membuat SSH Key
+SSH Key adalah kunci yang digunakan untuk autentikasi ke SSH Server
+Untuk membuat SSH Key, gunakan perintah ssh-keygen di terminal gitbash untuk windows
