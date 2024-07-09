@@ -6,3 +6,44 @@ Merupakan protokol jaringan untuk komunikasi jaringan yang aman dan terenkripsi
 Hal yang pertama perlu dilakukan ketika menggunakan SSH adalah membuat SSH Key
 SSH Key adalah kunci yang digunakan untuk autentikasi ke SSH Server
 Untuk membuat SSH Key, gunakan perintah ssh-keygen di terminal gitbash untuk windows
+Secara otomatis akan terdapat 2 key dilocal kita, yaitu private key dan public key
+Bisa dilihat didalam folder .ssh dihome directory
+
+Lalu tambahkan public key dengan cara buka dulu folder .ssh di text editor lalu kode difile public masukkan di penbaturan key di github
+
+Untuk melihat apakah SSH ke github sudah terhubung caranya:
+ssh -T git@github.com
+
+#MENAMBAHKAN REMOTE REPOSITORY
+git remote add namaremote ssh-url(link ssh) 
+
+Noted : untuk namaremote bebas hanya saja biasanya orang memberi nama origin
+
+#UNTUK MELIHAT REMOTE MENGARAH KEMANA
+git remote get-url namaremote
+
+#MENGHAPUS REMOTE REPOSITORY
+git remote rm namaremote
+
+#PUSH 
+Untuk mengirim perubahan branch ke remote repo dengan nama branch sama:
+git push namaremote namabranch
+
+Untuk mengirim ke repo remote dengan nama branch yang berbeda :
+git push namaremote localbranch:remotebranch
+Noted: saat kita push jika nama local branch master A dan saat diremote kita ingin nama B
+
+#PUSH SEMUA BRANCH
+git push namaremote --all
+
+#MENGHAPUS BRANCH PADA REPOSITORY REMOTE
+git push --delete namaremote namabranch
+
+#CLONE
+Mendownload project di remote repo ke local dan secara otomatis diwonload sebagai git project, dengan perintah:
+git clone <link remote>
+
+Secara default nama folder otomatis akan sama dengan nama remote repo, jika ingin membuat nama folder yang berbeda, gunakan perintah:
+git clone <link remote> namafolder
+
+Noted: yang didwonload hanya branch  utamanya
